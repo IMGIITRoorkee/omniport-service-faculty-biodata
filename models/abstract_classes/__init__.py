@@ -1,0 +1,1 @@
+from faculty_biodata.models.abstract_classes.base_model import BaseModel
