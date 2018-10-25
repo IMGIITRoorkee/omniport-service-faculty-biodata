@@ -14,6 +14,7 @@ class AbstractTeachingEngagement(BaseModel):
         blank=True,
         null=True,
     )
+    
     student_count = models.IntegerField()
 
     course = models.CharField(

@@ -1,0 +1,1 @@
+from faculty_biodata.models.profile.profile import Profile

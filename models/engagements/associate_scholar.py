@@ -9,9 +9,11 @@ class AbstractAssociateScholar(BaseModel):
     This model contains a research scholar associated with the faculty member
     """
 
-    scholar = models.ForeignKey(
-        to=swapper.get_model_name('kernel', 'Student'),
-        on_delete=models.CASCADE,
+    scholar_name = models.CharField(
+        max_length=63,
+    )
+    institution = models.CharField(
+        max_length=127,
     )
 
     class Meta:
