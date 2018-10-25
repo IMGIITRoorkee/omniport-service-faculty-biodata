@@ -3,8 +3,8 @@ from faculty_biodata.models.accomplishments.education import (
     Education,
 )
 
-from faculty_biodata.models.accomplishments.honor import (
-    AbstractHonour,
+from faculty_biodata.models.accomplishments.honour import (
+    AbstractHonour, 
     Honour,
 )
 
