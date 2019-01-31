@@ -4,13 +4,16 @@ import swapper
 from kernel.utils.upload_to import UploadTo
 
 from common_biodata.models.profile.profile import AbstractProfile
-from faculty_biodata.models.abstract_classes.base_model import BaseModel
 
 
-class Profile(AbstractProfile, BaseModel):
+class Profile(AbstractProfile):
     """
     This model constains informatation about the home page of the faculty_member
     """
+    faculty_member = models.OneToOneField(
+        to=swapper.get_model_name('kernel', 'FacultyMember'),
+        on_delete=models.CASCADE,
+    )
     resume = models.FileField(
         upload_to=UploadTo('faculty_biodata', 'resume')
     )
