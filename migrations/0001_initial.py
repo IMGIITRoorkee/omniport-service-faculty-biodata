@@ -3,7 +3,7 @@
 from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
-import kernel.utils.upload_to
+import formula_one.utils.upload_to
 
 
 class Migration(migrations.Migration):
@@ -199,7 +199,7 @@ class Migration(migrations.Migration):
                 ('journal', models.CharField(max_length=255)),
                 ('priority', models.IntegerField(default=0)),
                 ('visibility', models.BooleanField(default=True)),
-                ('file', models.FileField(blank=True, null=True, upload_to=kernel.utils.upload_to.UploadTo('faculty_biodata', 'papers'))),
+                ('file', models.FileField(blank=True, null=True, upload_to=formula_one.utils.upload_to.UploadTo('faculty_biodata', 'papers'))),
                 ('faculty_member', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.KERNEL_FACULTYMEMBER_MODEL)),
             ],
             options={
@@ -214,7 +214,7 @@ class Migration(migrations.Migration):
                 ('datetime_modified', models.DateTimeField(auto_now=True)),
                 ('handle', models.SlugField(blank=True, max_length=31)),
                 ('description', models.TextField()),
-                ('resume', models.FileField(upload_to=kernel.utils.upload_to.UploadTo('faculty_biodata', 'resume'))),
+                ('resume', models.FileField(upload_to=formula_one.utils.upload_to.UploadTo('faculty_biodata', 'resume'))),
                 ('faculty_member', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.KERNEL_FACULTYMEMBER_MODEL)),
             ],
             options={
@@ -235,7 +235,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField(blank=True)),
                 ('priority', models.IntegerField(default=0)),
                 ('visibility', models.BooleanField(default=True)),
-                ('image', models.ImageField(blank=True, null=True, upload_to=kernel.utils.upload_to.UploadTo('faculty_biodata', 'projects'))),
+                ('image', models.ImageField(blank=True, null=True, upload_to=formula_one.utils.upload_to.UploadTo('faculty_biodata', 'projects'))),
                 ('financial_outlay', models.CharField(max_length=127)),
                 ('funding_agency', models.CharField(max_length=127)),
                 ('other_investigating_officers', models.CharField(blank=True, max_length=127, null=True)),

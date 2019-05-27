@@ -3,7 +3,7 @@ from django.db import models
 
 from common_biodata.models import AbstractPaper
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
-from kernel.utils.upload_to import UploadTo
+from formula_one.utils.upload_to import UploadTo
 
 
 class Paper(AbstractPaper, BaseModel):

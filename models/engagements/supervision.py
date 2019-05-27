@@ -3,7 +3,7 @@ from django.db import models
 
 from faculty_biodata.constants.supervision import SUPERVISION_CATEGORIES
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
-from kernel.mixins.period_mixin import BlurryPeriodMixin
+from formula_one.mixins.period_mixin import BlurryPeriodMixin
 
 
 class AbstractSupervision(BlurryPeriodMixin, BaseModel):

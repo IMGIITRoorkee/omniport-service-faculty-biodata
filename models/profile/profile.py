@@ -1,7 +1,7 @@
 from django.db import models
 
 import swapper
-from kernel.utils.upload_to import UploadTo
+from formula_one.utils.upload_to import UploadTo
 
 from common_biodata.models.profile.profile import AbstractProfile
 
