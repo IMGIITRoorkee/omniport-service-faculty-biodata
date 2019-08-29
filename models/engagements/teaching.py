@@ -17,13 +17,25 @@ class AbstractTeachingEngagement(BaseModel):
     
     student_count = models.IntegerField()
 
-    course = models.CharField(
+    course_title = models.CharField(
+        max_length=127,
+    )
+    course_code = models.CharField(
+        max_length=127,
+    )
+    class_name = models.CharField(
         max_length=127,
     )
 
-    lecture_hours = models.IntegerField()
-    practical_hours = models.IntegerField()
-    tutorial_hours = models.IntegerField()
+    lecture_hours = models.IntegerField(
+        blank=True,
+    )
+    practical_hours = models.IntegerField(
+        blank=True,
+    )
+    tutorial_hours = models.IntegerField(
+        blank=True,
+    )
 
     def __str__(self):
         """
@@ -32,9 +44,9 @@ class AbstractTeachingEngagement(BaseModel):
         """
 
         faculty_member = self.faculty_member
-        course = self.course
+        course_name = self.course_name
         class_name = self.class_name
-        return f'{faculty_member}: {course}, {class_name}'
+        return f'{faculty_member}: {course_name}, {class_name}'
 
     class Meta:
         """

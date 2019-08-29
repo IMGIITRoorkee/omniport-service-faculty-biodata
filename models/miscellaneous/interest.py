@@ -10,11 +10,6 @@ class Interest(AbstractInterest, BaseModel):
     This model contains the interests of the faculty member
     """
 
-    faculty_member = models.OneToOneField(
-        to=swapper.get_model_name('kernel', 'FacultyMember'),
-        on_delete=models.CASCADE,
-    )
-
     class Meta:
         """
         Meta class for Interest
