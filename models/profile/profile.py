@@ -15,6 +15,8 @@ class Profile(AbstractProfile):
         on_delete=models.CASCADE,
     )
     resume = models.FileField(
+        blank=True,
+        null=True,
         upload_to=UploadTo('faculty_biodata', 'resume')
     )
     class Meta:
