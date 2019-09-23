@@ -5,7 +5,7 @@ INSTITUTE = 'i'
 EXTERNAL = 'e'
 SCOPES = (
   (DEPARTMENTAL, 'Departmental'),
-  (INSTITUTE, 'Central'),
+  (CENTRAL, 'Central'),
   (INSTITUTE, 'Institute'),
   (EXTERNAL, 'External')
 )
