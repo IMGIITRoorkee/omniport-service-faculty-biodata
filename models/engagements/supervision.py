@@ -23,7 +23,9 @@ class AbstractSupervision(BlurryPeriodMixin, BaseModel):
 
     name_of_other_supervisors = models.TextField()
 
-    scholars_name = models.TextField()
+    scholars_name = models.TextField(
+        blank=True
+    )
 
     class Meta:
         """
