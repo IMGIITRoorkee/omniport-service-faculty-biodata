@@ -33,7 +33,7 @@ class Project(AbstractProject, BaseModel):
     )
 
     project_type = models.CharField(
-        max_length=3,
+        max_length=1,
         choices=PROJECT_TYPES,
     )
 
@@ -52,4 +52,5 @@ class Project(AbstractProject, BaseModel):
 
         faculty_member = self.faculty_member
         string = super().__str__()
-        return f'{faculty_member} : {string}'
+        project_type = self.get_project_type_display()
+        return f'{faculty_member} : ({project_type}), {string}'

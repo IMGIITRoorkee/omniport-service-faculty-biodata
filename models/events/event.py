@@ -13,11 +13,11 @@ class AbstractEvent(PeriodMixin, BaseModel):
     """
 
     name = models.CharField(
-        max_length=127,
+        max_length=255,
     )
 
     sponsor = models.CharField(
-        max_length=127,
+        max_length=255,
         blank=True,
     )
 
@@ -51,8 +51,7 @@ class AbstractEvent(PeriodMixin, BaseModel):
         faculty_member = self.faculty_member
         category = self.get_category_display()
         name = self.name
-        end_year = self.end_year
-        return f'{faculty_member}: {name}, {end_year} ({category})'
+        return f'{faculty_member}: {name}, ({category})'
 
 
 class Event(AbstractEvent):

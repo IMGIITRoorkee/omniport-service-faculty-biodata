@@ -15,6 +15,10 @@ class AbstractAssociateScholar(BaseModel):
     institution = models.CharField(
         max_length=127,
     )
+    home_page = models.URLField(
+        blank=True,
+        max_length=255,
+    )
 
     class Meta:
         """
@@ -30,8 +34,8 @@ class AbstractAssociateScholar(BaseModel):
         """
 
         faculty_member = self.faculty_member
-        scholar = self.scholar
-        return f'{faculty_member} - {scholar}'
+        scholar_name = self.scholar_name
+        return f'{faculty_member} - {scholar_name}'
 
 
 class AssociateScholar(AbstractAssociateScholar):

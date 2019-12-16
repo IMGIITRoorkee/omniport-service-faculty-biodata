@@ -15,7 +15,9 @@ class AbstractTeachingEngagement(BaseModel):
         null=True,
     )
     
-    student_count = models.IntegerField()
+    student_count = models.IntegerField(
+        blank=True
+    )
 
     course_title = models.CharField(
         max_length=127,
@@ -44,9 +46,9 @@ class AbstractTeachingEngagement(BaseModel):
         """
 
         faculty_member = self.faculty_member
-        course_name = self.course_name
+        course_title = self.course_title
         class_name = self.class_name
-        return f'{faculty_member}: {course_name}, {class_name}'
+        return f'{faculty_member}: {course_title}, {class_name}'
 
     class Meta:
         """
