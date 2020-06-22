@@ -29,6 +29,10 @@ class AbstractSupervision(BlurryPeriodMixin, BaseModel):
         blank=True
     )
 
+    description = models.TextField(
+        blank=True,
+    )
+
     class Meta:
         """
         Meta class for AbstractSupervision

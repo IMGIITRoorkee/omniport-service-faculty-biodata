@@ -35,6 +35,10 @@ class AbstractEvent(PeriodMixin, BaseModel):
         choices=EVENT_ROLES,
     )
 
+    description = models.TextField(
+        blank=True,
+    )
+
     class Meta:
         """
         Meta class for BaseEvent
