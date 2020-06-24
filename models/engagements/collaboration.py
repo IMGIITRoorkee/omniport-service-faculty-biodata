@@ -4,6 +4,7 @@ from django.db import models
 from faculty_biodata.mixins.organisation_mixin import OrganisationMixin
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 
+from faculty_biodata.constants.collaboration_types import COLLABORATION_TYPES, OTHER
 
 class AbstractCollaboration(OrganisationMixin, BaseModel):
     """
@@ -12,6 +13,12 @@ class AbstractCollaboration(OrganisationMixin, BaseModel):
 
     topic = models.CharField(
         max_length=255,
+    )
+
+    level = models.CharField(
+        max_length=3,
+        choices=COLLABORATION_TYPES,
+        default=OTHER,
     )
 
     class Meta:
