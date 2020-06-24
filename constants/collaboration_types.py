@@ -1,4 +1,4 @@
-#Collaboration Types
+# Collaboration types
 UNDERGRADUATE = 'ug'
 POSTGRADUATE = 'pg'
 DOCTORATE = 'phd'

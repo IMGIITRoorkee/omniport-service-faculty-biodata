@@ -18,7 +18,7 @@ class AbstractCollaboration(OrganisationMixin, BaseModel):
     level = models.CharField(
         max_length=3,
         choices=COLLABORATION_TYPES,
-        default=OTHER,
+        blank=True,
     )
 
     class Meta:
