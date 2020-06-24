@@ -2,6 +2,7 @@ import swapper
 from django.db import models
 
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
+from faculty_biodata.constants.semesters import SEMESTER_TYPES, SPRING
 
 
 class AbstractTeachingEngagement(BaseModel):
@@ -19,6 +20,11 @@ class AbstractTeachingEngagement(BaseModel):
         blank=True
     )
 
+    semester = models.CharField(
+        max_length=1,
+        choices=SEMESTER_TYPES,
+        default=SPRING,
+    )
     course_title = models.CharField(
         max_length=127,
     )
