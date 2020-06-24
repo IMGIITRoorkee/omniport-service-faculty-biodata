@@ -1,4 +1,4 @@
-# Semesters Types
+# Semester types
 SPRING = 's'
 AUTUMN = 'a'
 SEMESTER_TYPES = (

@@ -1,9 +1,11 @@
 import swapper
 from django.db import models
 
-from faculty_biodata.constants.supervision import SUPERVISION_CATEGORIES, PHD_TYPES
-from faculty_biodata.models.abstract_classes.base_model import BaseModel
 from formula_one.mixins.period_mixin import BlurryPeriodMixin
+
+from faculty_biodata.models.abstract_classes.base_model import BaseModel
+from faculty_biodata.constants.supervision import SUPERVISION_CATEGORIES
+from faculty_biodata.constants.phd_types import PHD_TYPES
 
 
 class AbstractSupervision(BlurryPeriodMixin, BaseModel):
@@ -25,7 +27,6 @@ class AbstractSupervision(BlurryPeriodMixin, BaseModel):
         max_length=1,
         choices=PHD_TYPES,
         blank=True,
-        null=True,
     )
 
     name_of_other_supervisors = models.TextField(
