@@ -45,6 +45,9 @@ from faculty_biodata.models.publications.paper import Paper
 from faculty_biodata.models.miscellaneous.interest import (
     Interest,
 )
+from faculty_biodata.models.miscellaneous.miscellaneous import (
+    Miscellaneous,
+)
 
 # Profile
 from faculty_biodata.models.profile.profile import Profile

@@ -18,6 +18,7 @@ models = [
     'Membership',
     'Book',
     'Paper',
+    'Miscellaneous',
 ]
 
 for model in models:
