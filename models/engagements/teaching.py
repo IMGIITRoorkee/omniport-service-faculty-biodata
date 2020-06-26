@@ -21,9 +21,7 @@ class AbstractTeachingEngagement(BaseModel):
     )
 
     semester = models.CharField(
-        max_length=1,
-        choices=SEMESTER_TYPES,
-        default=SPRING,
+        blank=True,
     )
     course_title = models.CharField(
         max_length=127,
@@ -68,6 +66,12 @@ class TeachingEngagement(AbstractTeachingEngagement):
     """
     This class implements AbstractTeachingEngagement
     """
+
+    semester = models.CharField(
+        max_length=1,
+        choices=SEMESTER_TYPES,
+        default=SPRING,
+    )
 
     class Meta:
         """

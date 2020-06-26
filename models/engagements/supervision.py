@@ -24,8 +24,6 @@ class AbstractSupervision(BlurryPeriodMixin, BaseModel):
     )
 
     phd_type = models.CharField(
-        max_length=1,
-        choices=PHD_TYPES,
         blank=True,
     )
 
@@ -64,6 +62,12 @@ class Supervision(AbstractSupervision):
     """
     This class implements AbstractSupervision
     """
+
+    phd_type = models.CharField(
+        max_length=1,
+        choices=PHD_TYPES,
+        blank=True,
+    )
 
     class Meta:
         """
