@@ -19,6 +19,10 @@ class AbstractAssociateScholar(BaseModel):
         blank=True,
         max_length=255,
     )
+    interest = models.CharField(
+        blank=True,
+        max_length=255,
+    )
 
     class Meta:
         """
