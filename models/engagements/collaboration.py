@@ -15,12 +15,6 @@ class AbstractCollaboration(OrganisationMixin, BaseModel):
         max_length=255,
     )
 
-    level = models.CharField(
-        max_length=3,
-        choices=COLLABORATION_TYPES,
-        blank=True,
-    )
-
     class Meta:
         """
         Meta class for AbstractCollaboration
@@ -44,6 +38,12 @@ class Collaboration(AbstractCollaboration):
     """
     This class implements AbstractCollaboration
     """
+
+    level = models.CharField(
+        max_length=3,
+        choices=COLLABORATION_TYPES,
+        blank=True,
+    )
 
     class Meta:
         """
