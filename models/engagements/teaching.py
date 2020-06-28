@@ -35,12 +35,15 @@ class AbstractTeachingEngagement(BaseModel):
 
     lecture_hours = models.IntegerField(
         blank=True,
+        null=True,
     )
     practical_hours = models.IntegerField(
         blank=True,
+        null=True,
     )
     tutorial_hours = models.IntegerField(
         blank=True,
+        null=True,
     )
 
     def __str__(self):
