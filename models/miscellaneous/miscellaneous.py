@@ -31,8 +31,7 @@ class AbstractMiscellaneous(BaseModel):
 
         faculty_member = self.faculty_member
         heading = self.heading
-        description = self.description
-        return f'{faculty_member}: {heading} ({description})'
+        return f'{faculty_member}: {heading}'
 
 
 class Miscellaneous(AbstractMiscellaneous):
