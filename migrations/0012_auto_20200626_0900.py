@@ -23,6 +23,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='teachingengagement',
             name='semester',
-            field=models.CharField(choices=[('s', 'Spring'), ('a', 'Autumn')], default='s', max_length=1),
+            field=models.CharField(choices=[('s', 'Spring'), ('a', 'Autumn')], max_length=1),
         ),
     ]

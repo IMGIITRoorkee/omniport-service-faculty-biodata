@@ -73,7 +73,6 @@ class TeachingEngagement(AbstractTeachingEngagement):
     semester = models.CharField(
         max_length=1,
         choices=SEMESTER_TYPES,
-        default=SPRING,
     )
 
     class Meta:
