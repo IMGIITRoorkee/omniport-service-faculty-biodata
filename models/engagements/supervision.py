@@ -4,7 +4,7 @@ from django.db import models
 from formula_one.mixins.period_mixin import BlurryPeriodMixin
 
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
-from faculty_biodata.constants.supervision import SUPERVISION_CATEGORIES
+from faculty_biodata.constants import supervision
 from faculty_biodata.constants.phd_types import PHD_TYPES
 
 
@@ -20,7 +20,7 @@ class AbstractSupervision(BlurryPeriodMixin, BaseModel):
 
     category = models.CharField(
         max_length=3,
-        choices=SUPERVISION_CATEGORIES,
+        choices=supervision.SUPERVISION_CATEGORIES,
     )
 
     phd_type = models.CharField(
@@ -68,6 +68,15 @@ class Supervision(AbstractSupervision):
         choices=PHD_TYPES,
         blank=True,
     )
+
+    def save(self, *args, **kwargs):
+        """
+        Override save to ensure `phd_type` is blank when category is Project
+        """
+
+        if self.category == supervision.PROJECT:
+            self.phd_type = ''
+        super().save(*args, **kwargs)
 
     class Meta:
         """
