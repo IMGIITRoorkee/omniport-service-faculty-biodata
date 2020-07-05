@@ -1,5 +1,6 @@
 import swapper
 from django.db import models
+from tinymce.models import HTMLField
 
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 
@@ -12,7 +13,7 @@ class AbstractMiscellaneous(BaseModel):
         max_length=255,
     )
 
-    description = models.TextField(
+    description = HTMLField(
         blank=True,
     )
 
