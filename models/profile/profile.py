@@ -10,6 +10,7 @@ class Profile(AbstractProfile):
     """
     This model constains informatation about the home page of the faculty_member
     """
+
     faculty_member = models.OneToOneField(
         to=swapper.get_model_name('kernel', 'FacultyMember'),
         on_delete=models.CASCADE,
