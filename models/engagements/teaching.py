@@ -16,8 +16,9 @@ class AbstractTeachingEngagement(BaseModel):
         null=True,
     )
     
-    student_count = models.IntegerField(
-        blank=True
+    student_count = models.PositiveIntegerField(
+        blank=True,
+        null=True,
     )
 
     semester = models.CharField(
@@ -33,15 +34,15 @@ class AbstractTeachingEngagement(BaseModel):
         max_length=127,
     )
 
-    lecture_hours = models.IntegerField(
+    lecture_hours = models.PositiveIntegerField(
         blank=True,
         null=True,
     )
-    practical_hours = models.IntegerField(
+    practical_hours = models.PositiveIntegerField(
         blank=True,
         null=True,
     )
-    tutorial_hours = models.IntegerField(
+    tutorial_hours = models.PositiveIntegerField(
         blank=True,
         null=True,
     )
