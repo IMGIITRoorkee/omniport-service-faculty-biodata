@@ -20,7 +20,6 @@ class AbstractAssociateScholar(BaseModel):
         max_length=255,
     )
     interest = models.CharField(
-        blank=True,
         max_length=255,
     )
 
