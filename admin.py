@@ -15,6 +15,7 @@ models = [
     'Event',
     'Interest',
     'AdministrativePosition',
+    'ProfessionalBackground',
     'Membership',
     'Book',
     'Paper',
