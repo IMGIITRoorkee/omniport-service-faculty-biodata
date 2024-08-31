@@ -3,9 +3,10 @@ from django.db import models
 
 from faculty_biodata.mixins.organisation_mixin import OrganisationMixin
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
+from faculty_biodata.mixins.country_mixin import CountryMixin
 
 
-class AbstractHonour(OrganisationMixin, BaseModel):
+class AbstractHonour(OrganisationMixin, CountryMixin, BaseModel):
     """
     This model holds the honours awarded to the faculty member
     """

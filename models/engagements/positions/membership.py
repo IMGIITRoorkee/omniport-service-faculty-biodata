@@ -2,9 +2,10 @@ import swapper
 
 from common_biodata.models import AbstractPosition
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
+from faculty_biodata.mixins.country_mixin import CountryMixin
 
 
-class Membership(AbstractPosition, BaseModel):
+class Membership(AbstractPosition, CountryMixin, BaseModel):
     """
     This model contains information about a membership held by a faculty member
     """
