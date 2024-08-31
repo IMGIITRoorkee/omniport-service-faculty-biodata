@@ -5,9 +5,10 @@ from common_biodata.models.engagements.project import AbstractProject
 from faculty_biodata.constants.project_types import PROJECT_TYPES
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 from formula_one.utils.upload_to import UploadTo
+from faculty_biodata.mixins.country_mixin import CountryMixin
 
 
-class Project(AbstractProject, BaseModel):
+class Project(AbstractProject, CountryMixin, BaseModel):
     """
     This model contains the projects undertaken by the faculty member
     """

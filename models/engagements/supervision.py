@@ -6,9 +6,10 @@ from formula_one.mixins.period_mixin import BlurryPeriodMixin
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 from faculty_biodata.constants import supervision
 from faculty_biodata.constants.phd_types import PHD_TYPES
+from faculty_biodata.mixins.country_mixin import CountryMixin
 
 
-class AbstractSupervision(BlurryPeriodMixin, BaseModel):
+class AbstractSupervision(BlurryPeriodMixin, CountryMixin, BaseModel):
     """
     This model contains the doctorates, projects and theses supervised by the
     faculty member

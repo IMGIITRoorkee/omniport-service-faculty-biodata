@@ -2,9 +2,10 @@ import swapper
 from django.db import models
 
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
+from faculty_biodata.mixins.country_mixin import CountryMixin
 
 
-class AbstractVisit(BaseModel):
+class AbstractVisit(BaseModel, CountryMixin):
     """
     This model contains the visits by the faculty member
     """
