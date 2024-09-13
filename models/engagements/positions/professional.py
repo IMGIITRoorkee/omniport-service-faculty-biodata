@@ -4,9 +4,10 @@ from django.db import models
 from common_biodata.models import AbstractPosition
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 from faculty_biodata.mixins.country_mixin import CountryMixin
+from faculty_biodata.mixins.city_state_mixin import CityMixin, StateMixin
 
 
-class ProfessionalBackground(AbstractPosition, CountryMixin, BaseModel):
+class ProfessionalBackground(AbstractPosition, CountryMixin, CityMixin, StateMixin, BaseModel):
     """
     This model contains information about professional background of a
     faculty member

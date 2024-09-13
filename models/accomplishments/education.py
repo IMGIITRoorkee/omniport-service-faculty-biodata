@@ -3,9 +3,10 @@ import swapper
 from common_biodata.models.accomplishments.education import AbstractEducation
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 from faculty_biodata.mixins.country_mixin import CountryMixin
+from faculty_biodata.mixins.city_state_mixin import CityMixin, StateMixin
 
 
-class Education(AbstractEducation, CountryMixin, BaseModel):
+class Education(AbstractEducation, CountryMixin, CityMixin, StateMixin, BaseModel):
     """
     This model contains information about the education of a faculty member
     """
