@@ -13,6 +13,12 @@ class Project(AbstractProject, CountryMixin, BaseModel):
     This model contains the projects undertaken by the faculty member
     """
 
+    collaborating_institute = models.CharField(
+        max_length=127,
+        blank=True,
+        null=True
+    )
+
     image = models.ImageField(
         upload_to=UploadTo('faculty_biodata', 'projects'),
         blank=True,

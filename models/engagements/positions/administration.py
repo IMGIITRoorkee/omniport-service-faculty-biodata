@@ -5,9 +5,10 @@ from common_biodata.models import AbstractPosition
 from faculty_biodata.constants.scopes import SCOPES
 from faculty_biodata.models.abstract_classes.base_model import BaseModel
 from faculty_biodata.mixins.country_mixin import CountryMixin
+from faculty_biodata.mixins.city_state_mixin import CityMixin, StateMixin
 
 
-class AdministrativePosition(AbstractPosition, CountryMixin, BaseModel):
+class AdministrativePosition(AbstractPosition, CountryMixin, CityMixin, StateMixin, BaseModel):
     """
     This model contains information about an administrative position held by a
     faculty member

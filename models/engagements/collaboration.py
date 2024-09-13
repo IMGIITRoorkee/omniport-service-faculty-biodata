@@ -6,8 +6,9 @@ from faculty_biodata.models.abstract_classes.base_model import BaseModel
 
 from faculty_biodata.constants.collaboration_types import COLLABORATION_TYPES, OTHER
 from faculty_biodata.mixins.country_mixin import CountryMixin
+from faculty_biodata.mixins.city_state_mixin import CityMixin
 
-class AbstractCollaboration(OrganisationMixin, CountryMixin, BaseModel):
+class AbstractCollaboration(OrganisationMixin, CountryMixin, CityMixin, BaseModel):
     """
     This model contains the collaboration information of the faculty member
     """
