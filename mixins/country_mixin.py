@@ -13,7 +13,8 @@ class CountryMixin(models.Model):
     country = models.CharField(
         max_length=127,
         choices=COUNTRIES,
-        default=NONE,
+        blank=False,
+        null=False,
     )
 
 
