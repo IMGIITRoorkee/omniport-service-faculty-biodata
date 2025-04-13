@@ -246,7 +246,7 @@ ZAMBIA="ZAMBIA"
 ZIMBABWE="ZIMBABWE"
 KOREA="KOREA"
 SERBIA="SERBIA"
-NONE="NONE"
+
 
 COUNTRIES = (
     (AFGHANISTAN, "Afghanistan"),
@@ -497,5 +497,5 @@ COUNTRIES = (
     (ZIMBABWE, "Zimbabwe"),
     (KOREA, "Korea"),
     (SERBIA, "Serbia"),
-    (NONE, "None")
+    
 )

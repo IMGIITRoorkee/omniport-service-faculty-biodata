@@ -1,5 +1,5 @@
 from django.db import models
-from faculty_biodata.constants.country import COUNTRIES, NONE
+from faculty_biodata.constants.country import COUNTRIES
 
 
 
@@ -14,7 +14,7 @@ class CountryMixin(models.Model):
         max_length=127,
         choices=COUNTRIES,
         blank=False,
-        null=False,
+        
     )
 
 
